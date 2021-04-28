@@ -10,7 +10,7 @@ public class FixedList<T> implements List<T> {
         fix_size = size;
         list_size = 0;
     }
-    
+
     @Override
     public void insert(int number) {
         Node newNode = new Node(number);
