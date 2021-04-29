@@ -11,6 +11,7 @@ public class FixedList<T> implements List<T> {
         list_size = 0;
     }
 
+    @Override
     public void insert(int number) {
         Node newNode = new Node(number);
         if (isEmpty()){
@@ -25,13 +26,11 @@ public class FixedList<T> implements List<T> {
         lastNode = newNode;
     }
 
-    public boolean isFull() {
-        return list_size > fix_size;
-    }
+    @Override
+    public boolean isFull() { return list_size > fix_size; }
 
-    public boolean isEmpty() {
-        return lastNode == null;
-    }
+    @Override
+    public boolean isEmpty() { return lastNode == null; }
 
     @Override
     public String toString() {
