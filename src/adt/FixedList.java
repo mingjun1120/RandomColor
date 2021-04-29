@@ -27,10 +27,10 @@ public class FixedList<T> implements List<T> {
     }
 
     @Override
-    public boolean isFull() { return false; }
+    public boolean isFull() { return list_size > fix_size; }
 
     @Override
-    public boolean isEmpty() { return false; }
+    public boolean isEmpty() { return lastNode == null; }
 
     @Override
     public String toString() {
